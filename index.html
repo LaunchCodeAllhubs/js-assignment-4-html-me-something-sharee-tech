@@ -1,8 +1,183 @@
 <!DOCTYPE html>
 <html>
-   <head>
-   </head>
-   <body>
-      <!-- Write your HTML in this file! -->
-   </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Personal Journey</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">LOGO</a>
+      <input class="side-menu" type="checkbox" id="side-menu" />
+      <label class="hamb" for="side-menu"
+        ><span class="hamb-line"></span
+      ></label>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#usu-container">Mathematician</a></li>
+          <li><a href="#musician-container">Musician</a></li>
+          <li><a href="#programmer-container">Programmer</a></li>
+          <li><a href="#quotes-container">Quotes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero-container">
+        <div class="col1">
+          <img
+            id="headshot"
+            src="images/headshot-transparent.png"
+            alt="Smiling Woman"
+          />
+          <span class="circle1"></span>
+          <span class="circle2"></span>
+        </div>
+        <div class="col2">
+          <div class="title-quote">
+            <h1>Mathematician to Musician to<br />Master Programmer</h1>
+            <h4 class="quote1">
+              "Risk something or forever sit with your dreams."
+            </h4>
+            <p class="name">— Herb Brooks</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="usu-container" class="usu-container">
+        <div class="col">
+          <span class="square"></span>
+          <img
+            id="usu"
+            src="images/utah-state-university.jpeg"
+            alt="Utah State University"
+          />
+          <h2 id="math-title">Mathematician</h2>
+        </div>
+        <div class="col">
+          <p id="math-text">
+            I began my undergraduate studies in mathematics at Utah State
+            University. I grew up in a family of mathematicians and scientists,
+            so it was natural that I follow that path. I completed two years of
+            coursework in math prior to changing my major to music.
+          </p>
+        </div>
+      </div>
+
+      <div id="musician-container" class="musician-container">
+        <div class="cell1">
+          <span id="circle3"></span>
+          <h2 class="musician-title">Musician</h2>
+          <img
+            class="organ-hands"
+            src="images/organ-hands-keyboards-optimized.jpg"
+            alt="Organist Hands On Organ Keyboards"
+          />
+          <img
+            class="tabernacle-organ"
+            src="images/sharee-tabernacle-organ-optimized.jpg"
+            alt="Sharee At Tabernacle Organ"
+          />
+          <img
+            class="organ-feet"
+            src="images/sharee-feet-pedals-optimized.jpg"
+            alt="Organist Feet Playing Pedals"
+          />
+        </div>
+        <article class="cell2">
+          <img
+            class="organ-pipes"
+            src="images/organ-pipes-optimized.jpg"
+            alt="Organ Pipes"
+          />
+          <h3 id="title1">Utah State University</h3>
+          <p class="par1">
+            Though I had always loved music, I found myself drawn to the organ
+            because it evoked a wider range and deeper intensity of emotions
+            than I had experienced with any other instrument—from poignant
+            tender feelings, to dark struggle, to joyous jubilance. I discovered
+            I was finding and connecting with myself through this new found
+            medium.
+          </p>
+          <h3 id="title2">University of Kansas</h3>
+          <p class="par2">
+            After completing my bachelors degree at USU in organ performance, I
+            went to KU for grad school. As a new masters student in the organ
+            program, I was intimated by the playing of the veteran masters and
+            doctorate level students. Overwhelmed as I was, I dove into my
+            practicing and studies, and also worked as an organist in several
+            local congregations.
+          </p>
+        </article>
+      </div>
+
+      <div id="programmer-container" class="programmer-container">
+        <div class="col3">
+          <img
+            class="coder-girl"
+            src="images/female-programmer-01.svg"
+            alt="Female Computer Programmer"
+          />
+        </div>
+        <div class="col4">
+          <div class="programmer-text">
+            <h2 class="programmer-title">Programmer</h2>
+            <p class="programmer-par">
+              My goal is to gain the skills necessary to be marketable in the
+              tech industry and use those abilities to solve problems in a way
+              that aligns with my strengths and interests. LaunchCode is giving
+              me a solid foundation in coding that will help me to build web
+              applications and create a portfolio to transition into a career in
+              software development and work on a team to solve real-world
+              problems.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="quotes-container" class="quotes-container">
+        <h2 class="quote-title">Inspirational Quotes</h2>
+        <div class="quotes">
+          <div class="quote-block">
+            <div class="quote-symbol">&ldquo;</div>
+            <p class="quote-par">
+              "Don't limit yourself. Many people limit themselves to what they
+              think they can do. You can go as far as you mind lets you. What
+              you believe you can achieve."
+            </p>
+            <p class="quote-name">Mary Kay Ash</p>
+          </div>
+
+          <div class="quote-block">
+            <div class="quote-symbol">&ldquo;</div>
+            <p class="quote-par">
+              "The important thing is not being afraid to take a chance.
+              Remember, the greatest failure is to not try. Once you find
+              something you love to do, be the best at doing it."
+            </p>
+            <p class="quote-name">Debbi Fields</p>
+          </div>
+
+          <div class="quote-block">
+            <div class="quote-symbol">&ldquo;</div>
+            <p class="quote-par">
+              "I learned that courage was not the absence of fear, but the
+              triumph over it. The brave man is not he who does not feel afraid,
+              but he who conquers that fear."
+            </p>
+            <p class="quote-name">Nelson Mandela</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <div class="copyright">Copyright &copy; 2023</div>
+          <div class="design">Website Design by Sharee Thompson</div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
