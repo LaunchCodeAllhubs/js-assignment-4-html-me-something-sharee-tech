@@ -1,0 +1,489 @@
+/* Theming */
+
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Sono:wght@400;600&display=swap");
+
+/* Variables */
+:root {
+  --primary: #000000;
+  --secondary: #ffd4c4;
+  --text: #f9f9f9;
+  --accent: #2d656f;
+  --accent1: #ffeddd;
+  --accent2: #a4bdc0;
+  --accent3: #ffb07f;
+  --white: #f9f9f9;
+  --gray: #acb0b0;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "News Cycle", sans-serif;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* -------------------- Main Nav --------------------*/
+
+.header {
+  background-color: var(--accent1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.logo {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 60px;
+  margin-left: 50px;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--accent1);
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--accent);
+}
+
+.menu a:hover {
+  background-color: var(--gray);
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+} /* Style label tag */
+
+.hamb-line {
+  background: var(--accent);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--accent);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  max-height: 50%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+
+  .menu li {
+    float: left;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--accent3);
+  }
+
+  .hamb {
+    display: none;
+  }
+}
+
+/* ------------------------Hero Section--------------------------- */
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+.hero-container {
+  background-color: var(--accent1);
+  display: flex;
+  min-height: 600px;
+}
+
+.col1 {
+  width: 50%;
+  position: relative;
+}
+
+#headshot {
+  max-height: 400px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 30%;
+  margin-right: 50%;
+  z-index: 3;
+}
+
+.circle1 {
+  height: 500px;
+  width: 500px;
+  border-radius: 1000px;
+  background-color: var(--accent3);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+}
+
+.circle2 {
+  height: 200px;
+  width: 200px;
+  border-radius: 1000px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: 75px;
+  left: 40px;
+}
+
+.col2 {
+  width: 50%;
+  position: relative;
+}
+
+.title-quote {
+  position: absolute;
+  top: 45%;
+  color: var(--accent);
+}
+
+.quote1 {
+  margin-top: 10%;
+  font-size: 24px;
+}
+
+.name {
+  font-style: italic;
+  font-size: smaller;
+  margin-top: 2%;
+}
+
+/* ----------------------usu container-------------------- */
+.usu-container {
+  display: flex;
+  min-height: 600px;
+}
+
+.col {
+  width: 50%;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: var(--accent);
+  z-index: 1;
+}
+
+#usu {
+  position: absolute;
+  max-width: 500px;
+  z-index: 2;
+  top: 45%;
+  left: 30%;
+}
+
+#math-title {
+  position: absolute;
+  z-index: 3;
+  color: var(--text);
+  top: 20%;
+  left: 10%;
+}
+
+#math-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----------------------musician container-------------------- */
+.musician-container {
+  min-height: 900px;
+  display: flex;
+  margin-top: 15%;
+}
+
+.cell1 {
+  width: 40%;
+  position: relative;
+}
+
+#circle3 {
+  width: 300px;
+  height: 300px;
+  border-radius: 1000px;
+  background-color: var(--secondary);
+  position: absolute;
+  top: -2%;
+  left: 10%;
+  z-index: 1;
+}
+
+.musician-title {
+  position: absolute;
+  z-index: 2;
+  color: var(--accent);
+  top: 10%;
+  left: 42%;
+}
+
+.tabernacle-organ {
+  max-width: 600px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-radius: 10000px;
+  z-index: 1;
+}
+
+.organ-hands {
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  border-radius: 2000px;
+  z-index: 2;
+}
+
+.organ-feet {
+  max-width: 400px;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  border-radius: 100000px;
+  z-index: 1;
+}
+
+.cell2 {
+  width: 60%;
+  position: relative;
+}
+
+.organ-pipes {
+  opacity: 0.2;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#title1 {
+  position: absolute;
+  z-index: 2;
+  color: var(--primary);
+  top: 10%;
+  left: 40%;
+}
+
+.par1 {
+  position: absolute;
+  z-index: 2;
+  color: var(--primary);
+  top: 15%;
+  right: 20%;
+  left: 40%;
+  font-size: 22px;
+}
+
+#title2 {
+  position: absolute;
+  z-index: 2;
+  color: var(--primary);
+  top: 50%;
+  left: 40%;
+}
+
+.par2 {
+  position: absolute;
+  z-index: 2;
+  color: var(--primary);
+  top: 55%;
+  right: 20%;
+  left: 40%;
+  font-size: 22px;
+}
+
+/* <!------------------------Programmer Container----------------------> */
+.programmer-container {
+  margin-top: 10%;
+  min-height: 600px;
+  display: flex;
+  padding: 0 10%;
+}
+
+.col3,
+.col4 {
+  width: 50%;
+  position: relative;
+}
+
+.coder-girl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 500px;
+}
+
+.programmer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.programmer-title {
+  padding-bottom: 15px;
+}
+
+/* <!------------------------inspirational quotes---------------> */
+
+.quotes-container {
+  margin-top: 100px;
+  min-height: 600px;
+  padding: 0% 10% 10% 10%;
+}
+.quote-title {
+  text-align: center;
+}
+
+.quotes {
+  display: flex;
+  margin: 4% 0;
+  gap: 20px;
+}
+
+.quote-block {
+  background-color: var(--accent1);
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.quote-symbol {
+  font-size: 7.5em;
+  color: var(--accent3);
+  margin-top: 0;
+  margin-left: -0.1em;
+  font-family: "Sono", sans-serif;
+}
+
+.quote-par {
+  margin-top: -6em;
+}
+
+.quote-name {
+  font-style: bold;
+  text-align: left;
+  text-align: right;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+/* <!------------------------footer----------------------> */
+
+footer {
+  background-color: var(--accent);
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  font-size: 14px;
+}
+
+.copyright {
+  color: var(--white);
+}
+
+.design {
+  color: var(--white);
+}
